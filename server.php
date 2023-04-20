@@ -8,5 +8,18 @@ $list = [
         'Task #5'
 ];
 
+if(isset($_POST['item'])){
+    $list[] = $_POST['item'];
+}
+
+/**
+ * Adding more tasks
+ */
+
+
+/** 
+ * Response
+ */
+
 header('Content-Type: application/json');
 echo json_encode($list, true);
