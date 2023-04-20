@@ -1,3 +1,7 @@
-.list-group-item.done {
+.list-group-inner.done {
     text-decoration: line-through;
+}
+
+.list-group-inner:hover {
+    cursor: pointer;
 }
