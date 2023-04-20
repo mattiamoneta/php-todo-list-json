@@ -8,6 +8,7 @@ createApp({
         }
     },
     methods: {
+        // Get all tasks from axios
         getTodoList() {
 
             axios.get('server.php')
@@ -16,6 +17,7 @@ createApp({
                 });
         },
 
+        // Add new tasks 
         addToList() {
 
             const data = {
