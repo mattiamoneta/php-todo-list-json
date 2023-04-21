@@ -33,10 +33,10 @@
                                     </li>
                                     <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" v-for="(item, index) in todoList">
                                         <span class="list-group-item-sx"> 
-                                            <i v-if="item.status == 'done'" class="fa-solid fa-check text-success"></i>
+                                            <i v-if="item.done == true" class="fa-solid fa-check text-success"></i>
                                             <i v-else class="fa-solid fa-minus "></i>
                                     
-                                            <span class="list-group-inner ms-2" :class="item.status" @click="toggleStatus(index)">{{ item.text }}</span>                  
+                                            <span class="list-group-inner ms-2" :class="{done: item.done}" @click="toggleStatus(index)">{{ item.text }}</span>                  
                                         </span>
                                         <button class="btn btn-danger" @click="removeItem(index)">
                                             <i class="fa-solid fa-trash-can"></i>
@@ -46,16 +46,11 @@
                                 </ul>
                             </div>
                             <div class="card-footer">
-                                <div class="row row-cols-auto justify-content-between">
-                                    <div class="col-lg-10">
-                                        <label for="todo" class="visually-hidden">Add new task...</label>
-                                        <input type="text" class="form-control" id="todo" placeholder="Add new task..." v-model="todoText" @keyup.enter="addToList">
-                                    </div>
-                                    <div class="col text-end">
+                                <div class="input-group px-2 my-3">
+                                    <input type="text" class="form-control" id="todo" placeholder="Add new task..." v-model="todoText" @keyup.enter="addToList">
                                         <button class="btn btn-dark" @click="addToList">
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -26,12 +26,12 @@
 
  if(isset($_POST['toggle'])){
 
-    $currentStatus = $taskList[(int)$_POST['toggle']]['status'];
+    $isDone = $taskList[(int)$_POST['toggle']]['done'];
 
-    if($currentStatus == ''){
-        $taskList[(int)$_POST['toggle']]['status'] = 'done';
+    if($isDone == false){
+        $taskList[(int)$_POST['toggle']]['done'] = true;
     } else {
-        $taskList[(int)$_POST['toggle']]['status'] = '';
+        $taskList[(int)$_POST['toggle']]['done'] = false;
     }
     
 }
@@ -43,7 +43,7 @@
 if(isset($_POST['item'])){
     $taskList[] = [
         'text' => $_POST['item'],
-        'status' => ''
+        'done' => ''
     ];
 }
 
