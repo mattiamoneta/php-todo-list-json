@@ -1,3 +1,7 @@
+body {
+    font-family: 'Pathway Extreme', sans-serif !important;
+}
+
 .list-group-inner.done {
     text-decoration: line-through;
 }

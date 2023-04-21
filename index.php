@@ -11,6 +11,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap" rel="stylesheet">
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
@@ -24,7 +29,7 @@
                             
                         <div class="card">
                             <div class="card-header">
-                                <h2>Tasks</h2>
+                                <h2 class="fw-bold">My Tasks</h2>
                             </div>
                             <div class="card-body">
                                 <ul class="list-group list-group-flush">
@@ -38,7 +43,7 @@
                                     
                                             <span class="list-group-inner ms-2" :class="{done: item.done}" @click="toggleStatus(index)">{{ item.text }}</span>                  
                                         </span>
-                                        <button class="btn btn-danger" @click="removeItem(index)">
+                                        <button class="btn btn-outline-danger" @click="removeItem(index)">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>
            

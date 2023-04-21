@@ -5,7 +5,7 @@
     },
     {
         "text": "Task #2",
-        "done": ""
+        "done": false
     },
     {
         "text": "Task #3",
@@ -17,6 +17,6 @@
     },
     {
         "text": "Task #5",
-        "done": ""
+        "done": true
     }
 ]
